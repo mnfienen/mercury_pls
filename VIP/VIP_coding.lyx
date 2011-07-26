@@ -1,0 +1,216 @@
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1.8cm
+\topmargin 1.8cm
+\rightmargin 1.8cm
+\bottommargin 1.8cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Calculating the VIP (Variance Importance in Prediction) using Python
+\end_layout
+
+\begin_layout Standard
+Start with the correlation matrix between 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{y.}$
+\end_inset
+
+ This is performed columnwise resulting in a column vector.
+\end_layout
+
+\begin_layout Standard
+Pearson correlation matrix is
+\begin_inset Formula \[
+cor\left(\mathbf{X},\mathbf{Y}\right)=\frac{cov\left(\mathbf{X},\mathbf{Y}\right)}{\sigma_{X}\sigma_{Y}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Loadings matrix, returned from 
+\family typewriter
+rpy2
+\family default
+ is the matrix 
+\begin_inset Formula $\mathbf{W}$
+\end_inset
+
+ which is 
+\begin_inset Formula $NPAR\times NCOMP$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algorithm from the 
+\family typewriter
+mixOmics
+\family default
+ package 
+\family typewriter
+VIP
+\family default
+ program
+\end_layout
+
+\begin_layout Quotation
+{ 
+\end_layout
+
+\begin_layout Quotation
+W = object$loadings$X 
+\end_layout
+
+\begin_layout Quotation
+H = object$ncomp 
+\end_layout
+
+\begin_layout Quotation
+q = ncol(object$Y) 
+\end_layout
+
+\begin_layout Quotation
+p = ncol(object$X) 
+\end_layout
+
+\begin_layout Quotation
+VIP = matrix(0, nrow = p, ncol = H) 
+\end_layout
+
+\begin_layout Quotation
+cor2 = cor(object$Y, object$variates$X, use = "pairwise")^2 
+\end_layout
+
+\begin_layout Quotation
+cor2 = as.matrix(cor2, nrow = q) 
+\end_layout
+
+\begin_layout Quotation
+VIP[, 1] = W[, 1]^2 
+\end_layout
+
+\begin_layout Quotation
+if (H > 1) {
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+for (h in 2:H) { 
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+if (q == 1) { 
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+Rd = cor2[, 1:h] 
+\end_layout
+
+\begin_layout Quotation
+VIP[, h] = Rd %*% t(W[, 1:h]^2)/sum(Rd) 
+\end_layout
+
+\end_deeper
+\begin_layout Quotation
+} 
+\end_layout
+
+\begin_layout Quotation
+else {
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+Rd = apply(cor2[, 1:h], 2, sum) 
+\end_layout
+
+\begin_layout Quotation
+VIP[, h] = Rd %*% t(W[, 1:h]^2)/sum(Rd) 
+\end_layout
+
+\begin_layout Quotation
+}
+\end_layout
+
+\end_deeper
+\begin_layout Quotation
+}
+\end_layout
+
+\end_deeper
+\begin_layout Quotation
+} 
+\end_layout
+
+\begin_layout Quotation
+VIP = sqrt(p * VIP) 
+\end_layout
+
+\begin_layout Quotation
+rownames(VIP) = rownames(W) 
+\end_layout
+
+\begin_layout Quotation
+colnames(VIP) = paste("comp", 1:H) 
+\end_layout
+
+\begin_layout Quotation
+return(invisible(VIP)) 
+\end_layout
+
+\end_deeper
+\begin_layout Quotation
+}
+\end_layout
+
+\end_body
+\end_document

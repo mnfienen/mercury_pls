@@ -1,0 +1,19 @@
+
+
+********************
+
+output from OPTIMAL_comps_MSEP.py
+Number of outer iterations --> 1000
+Number of inner iterations --> 100
+PRESS Values
+1 components       239.6209
+2 components       187.3426
+3 components       180.2678
+4 components       174.2203
+********************
+Mean STD of PRESS --> 10.6250359
+Number of optimal components --> 3
+
+For details see alldata_PRESS_figure.eps
+********************
+

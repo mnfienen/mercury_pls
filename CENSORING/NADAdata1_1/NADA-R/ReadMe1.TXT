@@ -1,0 +1,21 @@
+NADA-R        version 1.0 Feb, 2005.
+NADA data in R/S language for use in R or S-Plus. 
+ 
+Data files for exercises from the textbook
+Nondetects And Data Analysis:  Statistics for censored environmental data
+by Dennis R. Helsel 2005 copyright Wiley, New York 
+
+
+These data are taken from the freely-available NADA for R package by Lopaka Lee
+<rclee@usgs.gov>.  NADA for R is available at CRAN mirrors worldwide
+(http://www.r-project.org).
+
+There are some minor variable name changes that have been made -- some
+datasets and/or variables do not have the exact names as listed in the NADA
+book.  This was a result of S-language constrants.
+
+Also note that all censoring indicators have been set to equal 1 for censorined observations.  This differs from the data as shown in the textbook, but is consistent with S-language constraints.
+
+
+
+

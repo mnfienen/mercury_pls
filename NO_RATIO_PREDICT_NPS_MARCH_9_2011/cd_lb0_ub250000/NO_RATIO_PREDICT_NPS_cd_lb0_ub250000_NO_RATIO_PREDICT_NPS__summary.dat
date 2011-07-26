@@ -1,0 +1,19 @@
+summary and R^2 for cd_lb0_ub250000/NO_RATIO_PREDICT_NPS_cd_lb0_ub250000_NO_RATIO_PREDICT_NPS__summary.dat
+
+
+
+
+************
+COEFFICIENTS
+          VarName           1comps           2comps           3comps           4comps
+          SULFATE         0.019688         0.216600         0.233146         0.100208
+              TOC         0.068683         0.519027         0.624323         0.780965
+               pH        -0.052548        -0.195197        -0.122355        -0.084223
+        Wetland %         0.122797         0.005702         0.008310        -0.007983
+************
+R^2
+0 comps   --> -0.001482
+1 comps   -->  0.155557
+2 comps   -->  0.345476
+3 comps   -->  0.374854
+4 comps   -->  0.405103

@@ -1,0 +1,22 @@
+<parameters>  <algorithm name="kriging" /> 
+  <Grid_Name  value="Total_HG"  /> 
+  <Property_Name  value="interp_LN_HG" /> 
+  <Kriging_Type  type="Ordinary Kriging (OK)" >
+  <parameters />
+</Kriging_Type>
+  <do_block_kriging  value="0"  /> 
+  <npoints_x  value="5" /> 
+  <npoints_y  value="5" /> 
+  <npoints_z  value="5" /> 
+  <Hard_Data  grid="Total_HG"   property="LN_THG"  /> 
+  <Search_Ellipsoid  value="0 0 0
+0 0 0" />
+  <Min_Conditioning_Data  value="0" /> 
+  <Max_Conditioning_Data  value="12" /> 
+  <Variogram  nugget="0" structures_count="1"  >
+  <structure_1  contribution="0.8"  type="Exponential"   >
+    <ranges max="450000"  medium="420000"  min="420000"   />
+    <angles x="0"  y="0"  z="0"   />
+  </structure_1>
+</Variogram>
+</parameters> 

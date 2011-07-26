@@ -1,0 +1,1 @@
+Data in Minitab version 14 formatused in the textbookNondetects And Data Analysis:  Statistics for censored environmental databy Dennis R. Helsel2004copyright Wiley, New Yorkwww.practicalstats.com/nada/files/nadadata.zipversion 1.0October, 2004

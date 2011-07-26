@@ -1,0 +1,11 @@
+Mercury PLS National Map Project
+
+This is a project for the MethylMercury National Map.
+
+The PLS modeling technique is used.
+
+Each subfolder contains a dated set of both code and data used. This is not a 
+traditional repo with linear versioning ....
+
+VIP, CENSORING, and TOTAL_HG_INTERP folders contain sort-of side branches for
+specific topical expliration.
