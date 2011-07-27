@@ -21,7 +21,7 @@ import pickle
 
 from predplot_especiale import mypredplot
 
-rpy2.robjects.numpy2ri.activate()
+rpy2.robjects.numpy2ri.activate() # note that in RPY2-2.2.2 this is required ot make conversions possible
 r = rob.r
 
 ######
