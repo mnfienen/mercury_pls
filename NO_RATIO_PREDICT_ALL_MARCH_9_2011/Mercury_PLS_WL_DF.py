@@ -12,6 +12,7 @@ import rpy2.robjects as rob     # bring in the robjects module as r since it is 
 import rpy2.rlike.container as rlc # used to make data.frame objects
 import numpy as np              # no work is complete without NUMPY!
 import rpy2.robjects.numpy2ri   # this makes numpy -> rpy conversions possible
+rpy2.robjects.numpy2ri.activate()
 r = rob.r
 import scat_plotter as sp       # scatter plotting routine
 import os as os
