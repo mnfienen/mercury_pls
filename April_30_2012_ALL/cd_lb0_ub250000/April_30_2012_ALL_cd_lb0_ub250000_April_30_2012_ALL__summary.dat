@@ -1,0 +1,19 @@
+summary and R^2 for cd_lb0_ub250000/April_30_2012_ALL_cd_lb0_ub250000_April_30_2012_ALL__summary.dat
+
+
+
+
+************
+COEFFICIENTS
+          VarName           1comps           2comps           3comps           4comps
+          SULFATE         0.014701         0.141894         0.237141         0.097037
+              TOC         0.055459         0.401542         0.603507         0.781135
+               pH        -0.043959        -0.210105        -0.141488        -0.083275
+        Wetland %         0.110853         0.023258         0.007550        -0.005156
+************
+R^2
+0 comps   --> -0.001475
+1 comps   -->  0.146724
+2 comps   -->  0.303039
+3 comps   -->  0.372017
+4 comps   -->  0.405785
