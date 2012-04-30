@@ -22,6 +22,7 @@ import pickle
 from predplot_especiale import mypredplot
 
 
+rpy2.robjects.numpy2ri.activate()
 
 ######
 # function to convert a list to a 2d float array
