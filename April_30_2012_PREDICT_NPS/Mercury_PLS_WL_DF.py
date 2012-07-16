@@ -363,6 +363,11 @@ for drainbounds in db:
 	for i,v in enumerate(r2out):
 	    ofp.write('%-10s-->' %(str(i) + ' comps'))
 	    ofp.write('%10f\n' %(v))
+	ofp.write('standard deviations of data:\n')
+	ofp.write('toc     --> %f\n' %(np.std(toc)))
+	ofp.write('so4     --> %f\n' %(np.std(so4)))
+	ofp.write('pH      --> %f\n' %(np.std(pH)))
+	ofp.write('wetland --> %f\n' %(np.std(wetland)))
 	ofp.close()
 	
 	

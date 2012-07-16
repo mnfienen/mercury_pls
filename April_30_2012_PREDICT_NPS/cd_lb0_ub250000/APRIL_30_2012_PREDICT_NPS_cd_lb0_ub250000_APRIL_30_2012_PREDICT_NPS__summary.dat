@@ -1,4 +1,4 @@
-summary and R^2 for cd_lb0_ub250000/APRIL_30_2012_PREDICT_NPS_cd_lb0_ub250000_APRIL_30_2012_PREDICT_NPS__summary.dat
+summary and R^2 for cd_lb0_ub250000/April_30_2012_PREDICT_NPS_cd_lb0_ub250000_April_30_2012_PREDICT_NPS__summary.dat
 
 
 
@@ -17,3 +17,8 @@ R^2
 2 comps   -->  0.303039
 3 comps   -->  0.372017
 4 comps   -->  0.405785
+standard deviations of data:
+toc     --> 0.409378
+so4     --> 0.694186
+pH      --> 1.067893
+wetland --> 1.665611
